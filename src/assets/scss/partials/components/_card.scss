@@ -1,0 +1,92 @@
+.card {
+  @extend .baseCard;
+  height: 11rem;
+  width: 10rem;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: -5px 8px 10px rgb(0 0 0 / 80%);
+  }
+
+  &-header {
+    width: 100%;
+    display: block;
+    height: 70px;
+
+    .card-id {
+      margin: 10px;
+      font-size: 14px;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-img {
+      border: 5px solid white;
+      background-color: white;
+      border-radius: 50%;
+      margin-top: -47px;
+    }
+
+    &-title {
+      width: 100%;
+      margin: 0;
+      color: $very-dark;
+      font-size: 1rem;
+      margin-top: -10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+
+      span {
+        color: $dark-gray;
+        font-weight: 400;
+      }
+    }
+
+    &-text {
+      font-size: 1.7rem;
+      color: $dark-gray;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-footer {
+    height: 1.7rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    &-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      align-items: center;
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      label {
+        font-size: 12px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

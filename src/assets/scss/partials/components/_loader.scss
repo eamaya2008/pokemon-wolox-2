@@ -1,0 +1,113 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loader-item {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation: loading 2s infinite;
+}
+
+.loader-ball {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  border: 8px solid #1d1d1b;
+  z-index: 1;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: $bg-red;
+}
+
+.loader-half-ball {
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  z-index: 2;
+  position: absolute;
+  background-color: white;
+  border-radius: 0px 0px 115px 115px;
+  width: 160px;
+  height: 70px;
+  border: 8px solid #1d1d1b;
+}
+
+.loader-horizon {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  border-radius: 0px;
+  width: 160px;
+  height: 32px;
+  background-color: #1d1d1b;
+  z-index: 3;
+}
+
+.loader-big-button {
+  z-index: 4;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 8px solid #1d1d1b;
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  background-color: white;
+}
+
+.loader-small-button {
+  z-index: 5;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 6px solid #1d1d1b;
+  position: absolute;
+  height: 30.5px;
+  width: 30.5px;
+  background-color: white;
+}
+
+@keyframes loading {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(-8px, 0) rotate(-18deg);
+  }
+  33% {
+    transform: translate(8px, 0) rotate(18deg);
+  }
+  50% {
+    transform: translate(-8px, 0) rotate(-12deg);
+  }
+  60% {
+    transform: translate(8px, 0) rotate(18deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}

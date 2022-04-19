@@ -1,0 +1,11 @@
+.main {
+  padding: 0px 4vw;
+}
+
+.pokemon-list {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

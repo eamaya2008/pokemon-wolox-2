@@ -1,0 +1,132 @@
+.pager-container {
+  @extend .baseCard;
+  margin-bottom: 15px;
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: inherit;
+  flex-direction: column-reverse;
+  gap: 0;
+  padding-top: 15px;
+
+  .page-size {
+    position: relative;
+    width: 60px;
+    margin-right: 30px;    
+
+    .page-size-action {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0px;
+      border: 1px solid;
+      padding: 2px;
+      border-radius: 25px;
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      .page-size-current {
+        margin-left: 5px;
+        font-size: 14px;
+      }
+      .page-size-button {
+        border: none;
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+    .page-size-list {
+      position: absolute;
+      z-index: 10;
+      background-color: white;
+      border: 1px solid;
+      list-style: none;
+      padding-left: 0;
+      width: 58px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5px;
+      border-radius: 10px;
+      gap: 5px;
+
+      li {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+
+        &:first-child {
+          border-radius: 10px 10px 0px 0px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+        &:last-child {
+          border-radius: 0px 0px 10px 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &:hover {
+          background-color: $bg-yellow;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .pager {
+    .pagination {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      padding-left: 0px;
+
+      li {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .pages {
+        border-radius: 20px;
+        width: 27px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 25px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $break-mobile) {
+  .pager-container {
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 0px;
+  }
+}
