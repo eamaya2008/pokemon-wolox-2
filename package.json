@@ -65,7 +65,7 @@
     "ts-jest": "^27.1.4"
   },
   "scripts": {
-    "start": "vite --port $PORT",
+    "start": "vite --host $HOST --port $PORT",
     "build": "tsc && vite build",
     "serve": "vite build && vite preview",
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
