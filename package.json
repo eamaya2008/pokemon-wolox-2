@@ -1,7 +1,7 @@
 {
   "name": "pokemon-wolox",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "engines": {
     "node": "16.x"
   },
@@ -65,7 +65,7 @@
     "ts-jest": "^27.1.4"
   },
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "serve": "vite build && vite preview",
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
