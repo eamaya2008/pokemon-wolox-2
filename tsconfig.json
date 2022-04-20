@@ -4,17 +4,15 @@
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client"],
-    "baseUrl": "./src",
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "baseUrl": "src",
     "allowJs": false,
     "skipLibCheck": false,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -22,6 +20,5 @@
   },
   "include": ["./src"],
   "references": [{ "path": "./tsconfig.node.json" }],
-  "exclude": ["./node_modules"]
+  "exclude": ["node_modules"]
 }
-
